@@ -4,5 +4,12 @@
     </head>
     <body>
         <h1>This is Homepage.</h1>
+        <h3><%= title%></h3>
+        <ul> 
+            <% messages.forEach(msg => {%>
+                <li><%= msg.user%>: <%= msg.text%>  <%= msg.added%> <a href="/message/<%= msg.id%>">Link</a></li>
+            <%})%>
+        </ul>
+        <a href="/new"><button>Add a message</button></a>
     </body>
 </html>
