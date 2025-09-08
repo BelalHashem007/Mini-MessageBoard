@@ -1,0 +1,93 @@
+:root {
+    line-height: 1.5;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+
+body {
+    display: flex;
+    color: black;
+    justify-content: center;
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.home-title{
+    text-align: center;
+}
+.messages{
+    list-style: none;
+    background-color: #EEEEEE;
+    padding: 20px;
+}
+.messages li {
+    padding: 10px 0px;
+    display: flex;
+
+}
+.user {
+    color:#E53935;
+}
+.message {
+    width: 300px;
+    text-wrap: wrap;
+    white-space: normal;
+    word-break: break-all;
+}
+.date{
+    opacity: 0.7;
+    margin: 0px 15px;
+}
+.btn {
+    text-align: center;
+}
+/*-------------Form--------------*/
+.form-body {
+    width: 60%;
+}
+.form-title {
+    text-align: center;
+}
+.form {
+    background-color: #EEEEEE;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.form label {
+    margin-bottom: 5px;
+}
+.form button {
+    width: 160px;
+    margin: 0 auto;
+    margin-top: 30px;
+    background-color: #BA68C8;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+.form button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    transform: scale(1.1);
+}
+textarea {
+    resize: none;
+}
+textarea,input {
+    width: 100%;
+    padding: 5px;
+}
+
+/*------------Message--------------------*/
+.msgContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.details {
+    background-color: #EEEEEE;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}

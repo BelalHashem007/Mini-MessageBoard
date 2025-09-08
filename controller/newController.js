@@ -8,7 +8,7 @@ function postMessage(req, res,next) {
   const message = {
     text: req.body.message,
     user: req.body.name,
-    added: new Date(),
+    added: new Date().toUTCString(),
   };
   db.postMessage(message);
   res.redirect('/');
