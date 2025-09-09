@@ -1,16 +1,16 @@
-const db = require("../data");
+const db = require("../db/queries");
 
 function getForm(req, res) {
   res.render("form");
 }
-function postMessage(req, res,next) {
+async function postMessage(req, res,next) {
     if (!req.body.name || !req.body.message) next(new Error("Missing data."))
   const message = {
-    text: req.body.message,
-    user: req.body.name,
-    added: new Date().toUTCString(),
+    username: req.body.name,
+    message: req.body.message,
+    date: new Date().toUTCString(),
   };
-  db.postMessage(message);
+  await db.addMessage(message);
   res.redirect('/');
 }
 module.exports = { getForm,postMessage };

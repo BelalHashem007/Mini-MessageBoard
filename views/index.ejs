@@ -9,8 +9,8 @@
       <ul class="messages">
         <% messages.forEach(msg => {%>
         <li>
-          <div class="message"><span class="user"><%= msg.user%></span>: <%= msg.text%></div>
-          <span class="date"><%= msg.added%></span>
+          <div class="message"><span class="user"><%= msg.username%></span>: <%= msg.message%></div>
+          <span class="date"><%= msg.date%></span>
           <a href="/message/<%= msg.id%>">Link</a>
         </li>
         <%})%>
