@@ -18,6 +18,12 @@
       <div class="btn">
         <a href="/new"><button>Add a message</button></a>
       </div>
+      <% if (locals.errors) {%>
+        <ul> <% errors.map(err=>{ %>
+          <li style="color: red;"><%= err.msg %></li>
+          <%});%>
+        </ul>
+      <%}%>
     </div>
   </body>
 </html>
